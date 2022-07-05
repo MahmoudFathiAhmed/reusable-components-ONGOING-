@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:my_reusable_components/app.dart';
+import 'package:my_reusable_components/app_pract_1.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,11 +12,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'My Default Widgets',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.deepPurple,
       ),
-      home: const App(),
+      home: const AppOne(),
     );
   }
 }
