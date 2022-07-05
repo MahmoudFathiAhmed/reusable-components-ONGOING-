@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_reusable_components/app_pract_2.dart';
 import 'package:my_reusable_components/resources/asset_manager.dart';
 import 'package:my_reusable_components/widgets/default_button.dart';
 import 'package:my_reusable_components/widgets/default_outlined_button.dart';
@@ -154,12 +155,14 @@ class _AppOneState extends State<AppOne> {
               ),
               OutlinedButtonWithImage(
                 imageHeight: 18,
-                text: 'anything',
+                text: 'Go to App Two',
                 textColor: Colors.deepPurple,
                 fontSize: 16,
                 fontWeight: FontWeight.w500,
                 height: 34,
-                onclick: () {},
+                onclick: () {
+                  Navigator.of(context).push(MaterialPageRoute(builder: (context)=>const AppTwo()));
+                },
                 borderRadius: 0,
                 borderColor: Colors.deepPurple,
                 borderWidth: 2,

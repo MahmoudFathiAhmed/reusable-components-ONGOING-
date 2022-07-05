@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_reusable_components/app_pract_1.dart';
+import 'package:my_reusable_components/app_pract_2.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.deepPurple,
       ),
-      home: const AppOne(),
+      home: const AppTwo(),
     );
   }
 }
