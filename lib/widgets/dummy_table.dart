@@ -13,7 +13,7 @@ class DummyTable extends StatelessWidget {
       padding: const EdgeInsets.all(16),
       decoration:  BoxDecoration(
         color: tableBackgroundColor,
-        borderRadius:   BorderRadius.all(Radius.circular(radius),
+        borderRadius: BorderRadius.all(Radius.circular(radius),
         ),
       ),
       child: Column(
