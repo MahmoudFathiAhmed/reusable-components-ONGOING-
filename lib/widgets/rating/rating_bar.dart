@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:my_reusable_components/resources/color_manager.dart';
 
 class RatingBar extends StatelessWidget {
   final double rate;

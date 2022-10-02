@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_reusable_components/widgets/rating/rating_bar.dart';
 
-import '../../resources/color_manager.dart';
-
 class RatingCardWidget extends StatelessWidget {
   final Color barColor;
   final Color textColor;
