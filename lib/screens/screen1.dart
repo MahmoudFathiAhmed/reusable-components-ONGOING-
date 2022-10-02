@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:my_reusable_components/resources/asset_manager.dart';
 import 'package:my_reusable_components/resources/color_manager.dart';
 import 'package:my_reusable_components/widgets/default_linear_gradient_button.dart';
+import 'package:my_reusable_components/widgets/diamond_button.dart';
 import 'package:my_reusable_components/widgets/dummy_table.dart';
 import 'package:my_reusable_components/widgets/progress_line.dart';
 
@@ -14,7 +16,10 @@ class Screen1 extends StatelessWidget {
         padding: const EdgeInsets.all(20.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
-          children:  [
+          children: [
+            const SizedBox(
+              height: 5,
+            ),
             const ProgressLine(color: Colors.amberAccent, percentage: 50),
             const SizedBox(
               height: 5,
@@ -23,14 +28,21 @@ class Screen1 extends StatelessWidget {
               tableBackgroundColor: Colors.amber,
               radius: 10,
             ),
-            const SizedBox(height: 10,),
+            const SizedBox(height: 10),
+            DiamondButton(
+              svgIcon: AppImages.musicIc,
+              onTap: () {},
+              backgroundColor: AppColors.paleGreen,
+              iconColor: AppColors.offWhite,
+            ),
+            const SizedBox(height: 10),
             DefaultLinearGradientButton(
               height: 49,
               width: 245,
               textColor: Colors.white,
               text: 'Login',
               fontWeight: FontWeight.w500,
-              onclick: (){},
+              onclick: () {},
               borderRadius: 6,
               begin: Alignment.centerLeft,
               end: Alignment.centerRight,

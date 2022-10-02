@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:my_reusable_components/app_pract_1.dart';
 import 'package:my_reusable_components/app_pract_2.dart';
 
 void main() {

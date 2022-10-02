@@ -28,9 +28,9 @@ class DummyTable extends StatelessWidget {
               columnSpacing: 16,
               horizontalMargin: 0,
               columns: const [
-                DataColumn(label: Text('First Column Name',)),
-                DataColumn(label: Text('Second Column Name',)),
-                DataColumn(label: Text('Third Column Name',)),
+                DataColumn(label: Text('First',)),
+                DataColumn(label: Text('Second',)),
+                DataColumn(label: Text('Third',)),
               ],
               rows: List.generate(demoTableContent.length, (index) => tableNameDataRow(demoTableContent[index])),
             ),
@@ -69,24 +69,6 @@ class TableContent {
 
 List <TableContent> demoTableContent = [
   TableContent(
-    icon: Icons.add,
-    title: 'Add',
-    date: "01-03-2021",
-    size: "3.5mb",
-  ),
-  TableContent(
-    icon: Icons.remove,
-    title: 'Remove',
-    date: "27-02-2021",
-    size: "19.0mb",
-  ),
-  TableContent(
-    icon: Icons.help,
-    title: 'Help',
-    date: "23-02-2021",
-    size: "32.5mb",
-  ),
-  TableContent(
     icon: Icons.sunny,
     title: 'Sunny',
     date: "21-02-2021",
@@ -103,11 +85,5 @@ List <TableContent> demoTableContent = [
     title: 'Facebook',
     date: "25-02-2021",
     size: "3.5mb",
-  ),
-  TableContent(
-    icon: Icons.folder,
-    title: 'Folder',
-    date: "25-02-2021",
-    size: "34.5mb",
   ),
 ];
