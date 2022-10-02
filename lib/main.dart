@@ -2,6 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:my_reusable_components/app_pract_2.dart';
 
 void main() {
+  /* no status bar
+    SystemChrome.setEnabledSystemUIMode(
+      SystemUiMode.manual, overlays: [SystemUiOverlay.bottom]);
+  * */
   runApp(const MyApp());
 }
 

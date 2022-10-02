@@ -3,9 +3,11 @@ import 'package:my_reusable_components/resources/asset_manager.dart';
 import 'package:my_reusable_components/resources/color_manager.dart';
 import 'package:my_reusable_components/widgets/buttons/default_linear_gradient_button.dart';
 import 'package:my_reusable_components/widgets/buttons/diamond_button.dart';
+import 'package:my_reusable_components/widgets/cards/blur_transparent_card.dart';
 import 'package:my_reusable_components/widgets/cards/text_over_image.dart';
 import 'package:my_reusable_components/widgets/cards/text_under_image.dart';
 import 'package:my_reusable_components/widgets/headers/default_header.dart';
+import 'package:my_reusable_components/widgets/rating/rating_card_widget.dart';
 import 'package:my_reusable_components/widgets/speak/speak_text.dart';
 import 'package:my_reusable_components/widgets/tables/dummy_table.dart';
 import 'package:my_reusable_components/widgets/lines/progress_line.dart';
@@ -83,6 +85,34 @@ class Screen1 extends StatelessWidget {
                     Colors.blue.withOpacity(.6),
                   ],
                 ),
+                const SizedBox(height: 10),
+                RatingCardWidget(
+                  barColor: AppColors.paleGreen,
+                  bgColor: AppColors.darkGrey,
+                  textColor: AppColors.white.withOpacity(0.9),
+                  locationRating: 5,
+                  priceRating: 6,
+                  roomRating: 7,
+                  servicesRating: 8,
+                ),
+                const SizedBox(height: 10),
+                Stack(
+                  alignment: AlignmentDirectional.center,
+                  children: [
+                    Image.network('https://marketplace.canva.com/Ic2KM/MAE3X1Ic2KM/1/s2/canva-woman-at-outdoor-iftar-picnic-MAE3X1Ic2KM.jpg',
+                      width: double.maxFinite,
+                      fit: BoxFit.cover,
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(20.0),
+                      child: BlurTransparentCard(
+                        color: AppColors.black,
+                        child: const Center(child:  Text('mahmoud')),
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 10),
               ],
             ),
           ),

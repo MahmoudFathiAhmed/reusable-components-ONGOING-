@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 class DefaultTextFormField extends StatelessWidget {
-  final String label;
+  // final String label;
+  final String hint;
   final String validation;
   final double radius;
   final Color borderColor;
@@ -13,23 +14,24 @@ class DefaultTextFormField extends StatelessWidget {
   final TextEditingController controller;
   final Widget prefixIcon;
   final Widget suffixIcon;
-  final FloatingLabelBehavior floatingLabelBehavior;
+  // final FloatingLabelBehavior floatingLabelBehavior;
   // final Function(String) onChanged;
 
   const DefaultTextFormField({
     Key? key,
-    required this.label,
+    // required this.label,
+    required this.hint,
     required this.radius,
     required this.type,
     required this.controller,
     required this.validation,
     this.isPassword = false,
-    required this.prefixIcon,
-    required this.suffixIcon,
+    this.prefixIcon = const SizedBox(height: 0,width: 0),
+    this.suffixIcon = const SizedBox(height: 0,width: 0),
     // required this.onChanged,
     required this.borderColor,
-    this.contentPadding = 10,
-    this.floatingLabelBehavior = FloatingLabelBehavior.auto,
+    this.contentPadding = 0,
+    // this.floatingLabelBehavior = FloatingLabelBehavior.auto,
     required this.fillColor,
     required this.isFilled,
   }) : super(key: key);
@@ -53,9 +55,10 @@ class DefaultTextFormField extends StatelessWidget {
         fillColor: fillColor,
         prefixIcon: prefixIcon,
         suffixIcon: suffixIcon,
-        labelText: label,
+        // labelText: label,
+        hintText: hint,
         contentPadding: EdgeInsets.symmetric(horizontal: contentPadding),
-        floatingLabelBehavior: floatingLabelBehavior,
+        // floatingLabelBehavior: floatingLabelBehavior,
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(radius),
         ),
