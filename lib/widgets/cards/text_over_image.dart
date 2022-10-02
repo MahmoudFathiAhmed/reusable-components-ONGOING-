@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class ImageTextCard extends StatelessWidget {
+class TextOverImage extends StatelessWidget {
   final String imageUrl;
   final double height;
   final double width;
@@ -11,7 +11,7 @@ class ImageTextCard extends StatelessWidget {
   final Color textColor;
   final FontWeight textFontWeight;
 
-  const ImageTextCard({
+  const TextOverImage({
     Key? key,
     required this.imageUrl,
     required this.text,

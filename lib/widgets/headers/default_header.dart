@@ -9,6 +9,7 @@ class DefaultHeader extends StatelessWidget {
   final double endFontSize;
   final Color endColor;
   final FontWeight endFontWeight;
+  final VoidCallback endOnTap;
 
   const DefaultHeader({
     Key? key,
@@ -20,6 +21,7 @@ class DefaultHeader extends StatelessWidget {
     this.endFontSize = 18,
     required this.endColor,
     this.endFontWeight = FontWeight.w400,
+    required this.endOnTap,
   }) : super(key: key);
 
   @override
@@ -36,7 +38,7 @@ class DefaultHeader extends StatelessWidget {
           ),
         ),
         TextButton(
-          onPressed: () {},
+          onPressed: endOnTap,
           child: Text(
             end,
             style: TextStyle(

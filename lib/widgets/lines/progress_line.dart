@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class ProgressLine extends StatelessWidget {
-  const ProgressLine({
+class ProgressiveLine extends StatelessWidget {
+  const ProgressiveLine({
     Key? key, required this.color, required this.percentage,
   }) : super(key: key);
 
