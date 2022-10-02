@@ -16,13 +16,29 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'My Default Widgets',
-      theme: ThemeData(
-        primarySwatch: Colors.deepPurple,
-      ),
-      home: const AppTwo(),
+        debugShowCheckedModeBanner: false,
+        title: 'My Default Widgets',
+        theme: ThemeData(
+          primarySwatch: Colors.deepPurple,
+        ),
+        home: const AppTwo(),
     );
   }
 }
+
+// ScreenUtilInit(
+// designSize: const Size(360, 750),
+// minTextAdapt: true,
+// builder: (BuildContext context, Widget? child){
+// return MaterialApp(
+// debugShowCheckedModeBanner: false,
+// title: 'My Default Widgets',
+// theme: ThemeData(
+// primarySwatch: Colors.deepPurple,
+// ),
+// home: const OnBoardingScreen(),
+// // home: const AppTwo(),
+// );
+// }
+// );
 
