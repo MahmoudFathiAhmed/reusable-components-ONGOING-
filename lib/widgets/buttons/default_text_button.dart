@@ -11,8 +11,8 @@ class DefaultTextButton extends StatelessWidget {
     required this.onClick,
     required this.text,
     required this.textColor,
-    this.fontSize = 14,
-    required this.fontWeight,
+    this.fontSize = 24,
+    this.fontWeight = FontWeight.w500,
   })
       : super(key: key);
 

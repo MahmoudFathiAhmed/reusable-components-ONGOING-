@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
 //NOTE: default width ==> double.infinity
 //NOTE: default background color ==> white
-class DefaultOutlinedButton extends StatelessWidget {
+//NOTE: default font size ==> 24
+//NOTE: default font weight ==> FontWeight.w500
+class OutlinedButtonWithImage extends StatelessWidget {
   final Color backgroundColor;
+  final String imagePath;
+  final double imageHeight;
+  final double spaceBetweenImageAndText;
   final String text;
   final Color textColor;
   final Color borderColor;
@@ -14,19 +19,22 @@ class DefaultOutlinedButton extends StatelessWidget {
   final VoidCallback onclick;
   final double borderRadius;
 
-  const DefaultOutlinedButton({
+  const OutlinedButtonWithImage({
     Key? key,
-    this.backgroundColor=Colors.white,
+    this.backgroundColor = Colors.white,
     required this.text,
     required this.textColor,
     this.fontSize = 24,
-    this.fontWeight =FontWeight.w500,
+    this.fontWeight = FontWeight.w500,
     this.width = double.infinity,
-    required this.height,
+    this.height =48,
     required this.onclick,
     required this.borderRadius,
     required this.borderColor,
-    required this.borderWidth,
+    this.borderWidth = 2,
+    required this.imagePath,
+    this.imageHeight = 18,
+    this.spaceBetweenImageAndText = 10,
   }) : super(key: key);
 
   @override
@@ -45,17 +53,32 @@ class DefaultOutlinedButton extends StatelessWidget {
             color: borderColor,
             width: borderWidth,
           ),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(borderRadius),
+          )
         ),
         onPressed: onclick,
-        child: Text(
-          text,
-          maxLines: 1,
-          overflow: TextOverflow.ellipsis,
-          style: TextStyle(
-            color: textColor,
-            fontSize: fontSize,
-            fontWeight: fontWeight,
-          ),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Image.asset(
+              imagePath,
+              height: imageHeight,
+            ),
+            SizedBox(
+              width: spaceBetweenImageAndText,
+            ),
+            Text(
+              text,
+              maxLines: 1,
+              overflow: TextOverflow.ellipsis,
+              style: TextStyle(
+                color: textColor,
+                fontSize: fontSize,
+                fontWeight: fontWeight,
+              ),
+            ),
+          ],
         ),
       ),
     );

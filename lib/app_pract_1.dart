@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:my_reusable_components/app_pract_2.dart';
 import 'package:my_reusable_components/resources/asset_manager.dart';
-import 'package:my_reusable_components/widgets/default_button.dart';
-import 'package:my_reusable_components/widgets/default_outlined_button.dart';
-import 'package:my_reusable_components/widgets/default_text_button.dart';
-import 'package:my_reusable_components/widgets/default_text_form_field.dart';
-import 'package:my_reusable_components/widgets/header_with_icon.dart';
-import 'package:my_reusable_components/widgets/line_with_text_spacer.dart';
-import 'package:my_reusable_components/widgets/onboarding_content.dart';
-import 'package:my_reusable_components/widgets/outlined_button_with_icon.dart';
-import 'package:my_reusable_components/widgets/outlined_button_with_image.dart';
+import 'package:my_reusable_components/widgets/buttons/default_button.dart';
+import 'package:my_reusable_components/widgets/buttons/default_outlined_button.dart';
+import 'package:my_reusable_components/widgets/buttons/default_text_button.dart';
+import 'package:my_reusable_components/widgets/formfield/default_text_form_field.dart';
+import 'package:my_reusable_components/widgets/headers/header_with_icon.dart';
+import 'package:my_reusable_components/widgets/spacers/line_with_text_spacer.dart';
+import 'package:my_reusable_components/widgets/onboarding/onboarding_content.dart';
+import 'package:my_reusable_components/widgets/buttons/outlined_button_with_icon.dart';
+import 'package:my_reusable_components/widgets/buttons/outlined_button_with_image.dart';
 
 class AppOne extends StatefulWidget {
   const  AppOne({Key? key}) : super(key: key);
@@ -84,15 +84,13 @@ class _AppOneState extends State<AppOne> {
                   ],
                 ),
               ),
-              const SizedBox(height: 10,),
+              const SizedBox(height: 10),
               //indicator
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: _buildPageIndicator(numPages: 3),
               ),
-              const SizedBox(
-                height: 10,
-              ),
+              const SizedBox(height: 10),
               DefaultTextFormField(
                 label: 'anything',
                 radius: 10,
@@ -107,47 +105,34 @@ class _AppOneState extends State<AppOne> {
                 fillColor: Colors.deepPurple.withOpacity(0.1),
                 isFilled: true,
               ),
-              const SizedBox(
-                height: 5,
-              ),
+              const SizedBox(height: 5),
               DefaultButton(
                 backgroundColor: Colors.deepPurple,
                 text: 'Enter anything',
-                fontSize: 16,
                 textColor: Colors.white,
                 onclick: () {
                   if(formKey.currentState!.validate()){
-
                   }
                 },
-                borderRadius: 14,
-                fontWeight: FontWeight.w200,
-                height: 34,
+                borderRadius: 20,
               ),
-              const SizedBox(
-                height: 5,
-              ),
+              const SizedBox(height: 5),
               HeaderWithIcon(
                 title: 'Anything',
                 titleColor: Colors.deepPurple,
-                titleFontWeight: FontWeight.w300,
                 titleSize: 16,
-                spaceBetweenIconAndName: 3,
                 nameBesideIcon: 'Help',
                 icon: Icons.help,
                 iconSize: 18,
                 iconColor: Colors.deepPurple.shade300,
-                nameBesideIconColor: Colors.deepPurple.shade300,
+                nameBesideIconColor: Colors.deepPurple,
                 nameBesideIconSize: 13,
               ),
-              const SizedBox(
-                height: 5,
-              ),
+              const SizedBox(height: 5),
               LineWithTextSpacer(
                 textColor: Colors.deepPurple,
                 text: 'OR',
                 lineColor: Colors.deepPurple.shade100,
-                textFontWeight: FontWeight.w300,
                 textSize: 16,
               ),
               const SizedBox(
@@ -158,58 +143,44 @@ class _AppOneState extends State<AppOne> {
                 text: 'Go to App Two',
                 textColor: Colors.deepPurple,
                 fontSize: 16,
-                fontWeight: FontWeight.w500,
                 height: 34,
                 onclick: () {
                   Navigator.of(context).push(MaterialPageRoute(builder: (context)=>const AppTwo()));
                 },
-                borderRadius: 0,
+                borderRadius: 5,
                 borderColor: Colors.deepPurple,
                 borderWidth: 2,
                 imagePath: AppImages.googleIc,
               ),
-              const SizedBox(
-                height: 5,
-              ),
+              const SizedBox(height: 5),
               OutlinedButtonWithIcon(
                   text: 'Anything',
                   textColor: Colors.deepPurple,
-                  fontWeight: FontWeight.w500,
                   height: 34,
                   fontSize: 16,
                   onclick: () {},
-                  borderRadius: 20,
+                  borderRadius: 5,
                   borderColor: Colors.deepPurple,
-                  borderWidth: 2,
                   icon: Icons.bedtime_outlined,
                   iconColor: Colors.deepPurple),
-              const SizedBox(
-                height: 5,
-              ),
+              const SizedBox(height: 5),
               DefaultOutlinedButton(
                 text: 'Anything',
                 textColor: Colors.deepPurple,
-                fontWeight: FontWeight.w500,
                 height: 34,
                 fontSize: 16,
                 onclick: () {},
                 borderRadius: 10,
                 borderColor: Colors.deepPurple,
-                borderWidth: 2,
               ),
-              const SizedBox(
-                height: 5,
-              ),
+              const SizedBox(height: 5),
               DefaultTextButton(
                 onClick: () {},
                 text: "anything",
                 textColor: Colors.deepPurple,
-                fontWeight: FontWeight.w500,
                 fontSize: 16,
               ),
-              const SizedBox(
-                height: 5,
-              ),
+              const SizedBox(height: 5),
             ],
           ),
         ),

@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:my_reusable_components/app_pract_1.dart';
 import 'package:my_reusable_components/resources/asset_manager.dart';
 // import 'package:my_reusable_components/widgets/rounded_bottom_nav_bar.dart';
-import 'package:my_reusable_components/widgets/side_menu.dart';
+import 'package:my_reusable_components/widgets/side_menu/side_menu.dart';
 import 'package:my_reusable_components/screens/screen1.dart';
 import 'package:my_reusable_components/screens/screen2.dart';
 import 'package:my_reusable_components/screens/screen3.dart';

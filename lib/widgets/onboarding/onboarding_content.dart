@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:my_reusable_components/widgets/default_text.dart';
+import 'package:my_reusable_components/widgets/text/default_text.dart';
 
 class OnBoardingContent extends StatelessWidget {
   final String image;

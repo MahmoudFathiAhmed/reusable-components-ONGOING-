@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:my_reusable_components/widgets/default_text.dart';
+import 'package:my_reusable_components/widgets/text/default_text.dart';
 //NOTE: default line height ==> 1
 //NOTE: default space around text ==> 10
 
@@ -16,7 +16,7 @@ class LineWithTextSpacer extends StatelessWidget {
     Key? key,
     required this.text,
     required this.textColor,
-    required this.textFontWeight,
+    this.textFontWeight = FontWeight.w500,
     required this.textSize,
     this.spaceAroundText = 10,
     this.lineHeight = 1,

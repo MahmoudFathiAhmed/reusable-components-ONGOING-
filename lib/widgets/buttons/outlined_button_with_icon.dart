@@ -27,11 +27,11 @@ class OutlinedButtonWithIcon extends StatelessWidget {
     this.fontSize = 24,
     this.fontWeight =FontWeight.w500,
     this.width = double.infinity,
-    required this.height,
+    this.height = 48,
     required this.onclick,
     required this.borderRadius,
     required this.borderColor,
-    required this.borderWidth,
+    this.borderWidth =2,
     required this.icon,
     required this.iconColor,
     this.iconSize = 24,
@@ -68,6 +68,9 @@ class OutlinedButtonWithIcon extends StatelessWidget {
             color: borderColor,
             width: borderWidth,
           ),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(borderRadius),
+          )
         ),
         onPressed: onclick,
       ),

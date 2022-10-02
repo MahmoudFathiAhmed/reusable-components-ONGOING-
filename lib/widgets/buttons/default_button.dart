@@ -20,9 +20,10 @@ class DefaultButton extends StatelessWidget {
       this.width = double.infinity,
       required this.onclick,
       required this.borderRadius,
-      this.fontSize = 24,
-      required this.fontWeight,
-      required this.height})
+      this.fontSize = 18,
+      this.fontWeight=FontWeight.w500,
+      this.height = 48,
+      })
       : super(key: key);
 
   @override
@@ -35,6 +36,9 @@ class DefaultButton extends StatelessWidget {
           color: backgroundColor),
       child: MaterialButton(
         onPressed: onclick,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(borderRadius),
+        ),
         child: Text(
           text,
           maxLines: 1,

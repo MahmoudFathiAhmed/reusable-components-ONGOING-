@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:my_reusable_components/widgets/default_text.dart';
+import 'package:my_reusable_components/widgets/text/default_text.dart';
 
 class HeaderWithIcon extends StatelessWidget {
   final String title;
@@ -19,13 +19,13 @@ class HeaderWithIcon extends StatelessWidget {
     required this.title,
     required this.titleColor,
     required this.titleSize,
-    required this.titleFontWeight,
+    this.titleFontWeight= FontWeight.w500,
     required this.icon,
     this.iconSize = 24,
     required this.nameBesideIcon,
     required this.nameBesideIconColor,
     required this.nameBesideIconSize,
-    required this.spaceBetweenIconAndName,
+    this.spaceBetweenIconAndName = 3,
     required this.iconColor,
   }) : super(key: key);
 

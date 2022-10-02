@@ -14,20 +14,20 @@ class DefaultLinearGradientButton extends StatelessWidget {
   final VoidCallback onclick;
   final double borderRadius;
 
-  const DefaultLinearGradientButton(
-      {Key? key,
-      required this.text,
-      required this.textColor,
-      this.width = double.infinity,
-      required this.onclick,
-      required this.borderRadius,
-      this.fontSize = 24,
-      required this.fontWeight,
-      required this.height,
-      required this.colors,
-      required this.begin,
-      required this.end})
-      : super(key: key);
+  const DefaultLinearGradientButton({
+    Key? key,
+    required this.text,
+    required this.textColor,
+    this.width = double.infinity,
+    required this.onclick,
+    required this.borderRadius,
+    this.fontSize = 24,
+    this.fontWeight = FontWeight.w500,
+    this.height = 48,
+    required this.colors,
+    this.begin = Alignment.centerLeft,
+    this.end = Alignment.centerRight,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
