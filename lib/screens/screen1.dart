@@ -3,6 +3,7 @@ import 'package:my_reusable_components/resources/asset_manager.dart';
 import 'package:my_reusable_components/resources/color_manager.dart';
 import 'package:my_reusable_components/widgets/buttons/default_linear_gradient_button.dart';
 import 'package:my_reusable_components/widgets/buttons/diamond_button.dart';
+import 'package:my_reusable_components/widgets/buttons/square_icon_text_button.dart';
 import 'package:my_reusable_components/widgets/cards/blur_transparent_card.dart';
 import 'package:my_reusable_components/widgets/cards/text_over_image.dart';
 import 'package:my_reusable_components/widgets/cards/text_under_image.dart';
@@ -31,6 +32,16 @@ class Screen1 extends StatelessWidget {
                   radius: 10,
                 ),
                 const SizedBox(height: 10),
+                 SquareIconTextButton(
+                   onTap: (){},
+                  icon: Icons.rocket_launch_outlined,
+                  iconColor: AppColors.paleGreen,
+                  text: 'Rocket',
+                   borderColor: Colors.amber,
+                   borderWidth: 2,
+                   radius: 10,
+                ),
+                const SizedBox(height: 10),
                 ProgressiveLine(color: AppColors.paleGreen, percentage: 70),
                 const SizedBox(height: 10),
                 DiamondButton(
@@ -47,18 +58,19 @@ class Screen1 extends StatelessWidget {
                   end: 'See all',
                   beginColor: AppColors.blue,
                   endColor: AppColors.paleGreen,
-                  endOnTap: (){},
+                  endOnTap: () {},
                 ),
                 const SizedBox(height: 10),
                 TextUnderImage(
-                  imageUrl: 'https://images.unsplash.com/photo-1664710476481-1213c456c56c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=872&q=80',
+                  imageUrl:
+                      'https://images.unsplash.com/photo-1664710476481-1213c456c56c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=872&q=80',
                   cardHeight: 230,
                   imageHeight: 130,
-                  title: 'anythinganythinganythinganythinganythinganythinganythinganythinganythinganything',
+                  title:
+                      'anythinganythinganythinganythinganythinganythinganythinganythinganythinganything',
                   source: 'anything',
                   textColor: Colors.white,
                   bgColor: AppColors.paleGreen,
-
                 ),
                 const SizedBox(height: 10),
                 TextOverImage(
@@ -99,7 +111,8 @@ class Screen1 extends StatelessWidget {
                 Stack(
                   alignment: AlignmentDirectional.center,
                   children: [
-                    Image.network('https://marketplace.canva.com/Ic2KM/MAE3X1Ic2KM/1/s2/canva-woman-at-outdoor-iftar-picnic-MAE3X1Ic2KM.jpg',
+                    Image.network(
+                      'https://marketplace.canva.com/Ic2KM/MAE3X1Ic2KM/1/s2/canva-woman-at-outdoor-iftar-picnic-MAE3X1Ic2KM.jpg',
                       width: double.maxFinite,
                       fit: BoxFit.cover,
                     ),
@@ -107,7 +120,7 @@ class Screen1 extends StatelessWidget {
                       padding: const EdgeInsets.all(20.0),
                       child: BlurTransparentCard(
                         color: AppColors.black,
-                        child: const Center(child:  Text('mahmoud')),
+                        child: const Center(child: Text('mahmoud')),
                       ),
                     ),
                   ],
