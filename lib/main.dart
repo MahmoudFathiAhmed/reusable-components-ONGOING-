@@ -6,6 +6,7 @@ void main() {
     SystemChrome.setEnabledSystemUIMode(
       SystemUiMode.manual, overlays: [SystemUiOverlay.bottom]);
   * */
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(const MyApp());
 }
 

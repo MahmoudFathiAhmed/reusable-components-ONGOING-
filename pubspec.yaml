@@ -21,7 +21,10 @@ dependencies:
   lottie: ^1.4.3
   carousel_slider: ^4.1.1
   smooth_page_indicator: ^1.0.0+2
-
+  video_player: ^2.4.7
+  wakelock: ^0.6.2
+  auto_orientation: ^2.2.1
+  native_device_orientation: ^1.1.4
 dev_dependencies:
   flutter_test:
     sdk: flutter
