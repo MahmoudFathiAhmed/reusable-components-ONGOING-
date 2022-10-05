@@ -45,7 +45,6 @@ class SquareIconTextButton extends StatelessWidget {
         width: sideLength,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(radius),
-          shape: BoxShape.rectangle,
           border: Border.all(color: borderColor, width: borderWidth),
           color: bgColor,
         ),
