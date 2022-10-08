@@ -24,9 +24,9 @@ class SpeakTextWidget extends StatelessWidget {
   SpeakTextWidget(
       {super.key,
       required this.text,
-      this.icon = Icons.play_circle_outline_outlined,
+      this.icon = Icons.play_circle_sharp,
       this.iconColor = Colors.orange,
-      this.iconSize = 40,
+      this.iconSize = 48,
       });
 
   final FlutterTts flutterTts = FlutterTts();
@@ -41,10 +41,14 @@ class SpeakTextWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return IconButton(
+      iconSize: iconSize,
+      color: iconColor,
+      padding: EdgeInsets.zero,
+      constraints: const BoxConstraints(),
+      splashRadius: (iconSize/2)-1,
       icon: Icon(
         icon,
-        color: iconColor,
-        size: iconSize,
+        // color: iconColor,
       ),
       onPressed: () => speak(text),
     );
