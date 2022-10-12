@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:my_reusable_components/resources/asset_manager.dart';
 import 'package:my_reusable_components/resources/color_manager.dart';
 import 'package:my_reusable_components/video_player/my_video_player.dart';
+import 'package:my_reusable_components/widgets/banners/show_material_banners.dart';
 import 'package:my_reusable_components/widgets/buttons/default_linear_gradient_button.dart';
 import 'package:my_reusable_components/widgets/buttons/diamond_button.dart';
 import 'package:my_reusable_components/widgets/buttons/square_icon_text_button.dart';
@@ -31,6 +32,15 @@ class Screen1 extends StatelessWidget {
                 const DummyTable(
                   tableBackgroundColor: Colors.amber,
                   radius: 10,
+                ),
+                const SizedBox(height: 10),
+                ShowMaterialBanner(
+                  content: 'subscribe',
+                  contentColor: Colors.white,
+                  bgColor: Colors.black.withOpacity(0.5),
+                  dismissColor: Colors.white,
+                  icon: Icons.ac_unit,
+                  iconColor: Colors.white,
                 ),
                 const SizedBox(height: 10),
                 ProgressiveLine(color: AppColors.paleGreen, percentage: 70),
