@@ -143,8 +143,8 @@ class Screen1 extends StatelessWidget {
                     ),
                   ],
                 ),
-                const SizedBox(height: 10),
-                const MyVideoPlayer(videoUrl: 'https://flutter.github.io/assets-for-api-docs/assets/videos/bee.mp4',)
+                // const SizedBox(height: 10),
+                // const MyVideoPlayer(videoUrl: 'https://flutter.github.io/assets-for-api-docs/assets/videos/bee.mp4',)
               ],
             ),
           ),

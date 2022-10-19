@@ -16,6 +16,7 @@ class AppColors {
 
   //Login & Register
   static Color blue = const Color(0xFF3585FE);
+  static Color navyBlue = const Color(0xff111f2d);
 
   //Grad button
   static Color gradClr1 = const Color(0xFF667EEA);
