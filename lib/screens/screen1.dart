@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:my_reusable_components/resources/asset_manager.dart';
 import 'package:my_reusable_components/resources/color_manager.dart';
-import 'package:my_reusable_components/video_player/my_video_player.dart';
+// import 'package:my_reusable_components/video_player/my_video_player.dart';
 import 'package:my_reusable_components/widgets/banners/show_material_banners.dart';
 import 'package:my_reusable_components/widgets/buttons/default_linear_gradient_button.dart';
 import 'package:my_reusable_components/widgets/buttons/diamond_button.dart';
 import 'package:my_reusable_components/widgets/buttons/square_icon_text_button.dart';
 import 'package:my_reusable_components/widgets/cards/blur_transparent_card.dart';
+import 'package:my_reusable_components/widgets/cards/gradient_card_widget.dart';
 import 'package:my_reusable_components/widgets/cards/text_over_image.dart';
 import 'package:my_reusable_components/widgets/cards/text_under_image.dart';
 import 'package:my_reusable_components/widgets/headers/default_header.dart';
@@ -45,27 +46,27 @@ class Screen1 extends StatelessWidget {
                 const SizedBox(height: 10),
                 ProgressiveLine(color: AppColors.paleGreen, percentage: 70),
                 const SizedBox(height: 10),
-                 Row(
-                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                   children: [
-                     SquareIconTextButton(
-                       onTap: (){},
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    SquareIconTextButton(
+                      onTap: () {},
                       icon: Icons.rocket_launch_outlined,
                       iconColor: AppColors.paleGreen,
                       text: 'Rocket',
-                       borderColor: Colors.amber,
-                       borderWidth: 2,
-                       radius: 10,
-                ),
-                DiamondButton(
+                      borderColor: Colors.amber,
+                      borderWidth: 2,
+                      radius: 10,
+                    ),
+                    DiamondButton(
                       svgIcon: AppImages.musicIc,
                       onTap: () {},
                       backgroundColor: AppColors.paleGreen,
                       iconColor: AppColors.offWhite,
+                    ),
+                    SpeakTextWidget(text: 'text'),
+                  ],
                 ),
-                SpeakTextWidget(text: 'text'),
-                   ],
-                 ),
                 const SizedBox(height: 10),
                 const SizedBox(height: 10),
                 DefaultLinearGradientButton(
@@ -142,6 +143,10 @@ class Screen1 extends StatelessWidget {
                       ),
                     ),
                   ],
+                ),
+                GradientCardWidget(
+                  startColor: AppColors.gradClr3,
+                  endColor: AppColors.gradClr4,
                 ),
                 // const SizedBox(height: 10),
                 // const MyVideoPlayer(videoUrl: 'https://flutter.github.io/assets-for-api-docs/assets/videos/bee.mp4',)

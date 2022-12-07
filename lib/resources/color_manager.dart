@@ -22,5 +22,13 @@ class AppColors {
   static Color gradClr1 = const Color(0xFF667EEA);
   static Color gradClr2 = const Color(0xFF64B6FF);
 
-
+  //Grad Card
+  static Color gradClr3 = const Color(0xffFFB157);
+  static Color gradClr4 = const Color(0xffFFA057);
+  static Color gradClr5 = const Color(0xffFF5B95);
+  static Color gradClr6 = const Color(0xffF8556D);
+  static Color gradClr7 = const Color(0xffD76EF5);
+  static Color gradClr8 = const Color(0xff8F7AFE);
+  static Color gradClr9 = const Color(0xff42E695);
+  static Color gradClr10 = const Color(0xff3BB2B8);
 }
